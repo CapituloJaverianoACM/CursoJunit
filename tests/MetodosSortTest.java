@@ -48,7 +48,7 @@ public class MetodosSortTest {
 	public void ListaConstante() throws Exception {
 		List<Integer> anterior = new ArrayList<Integer>(lista);
 		List<Integer> resultado = sort.bubbleSort(lista);
-		assertNotSame("Esta devolviendo la misma lista", lista, resultado)
+		assertFalse("Esta devolviendo la misma lista", lista == resultado);
 		for(int i = 0; i < lista.size(); i ++){
 			assertTrue("Cambia algun valor del parametro", anterior.get(i) == lista.get(i));
 		}
